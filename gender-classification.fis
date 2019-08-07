@@ -1,0 +1,50 @@
+[System]
+Name='gender-classification'
+Type='mamdani'
+Version=2.0
+NumInputs=3
+NumOutputs=1
+NumRules=4
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='male'
+Range=[1 102866]
+NumMFs=3
+MF1='high':'gauss2mf',[13980 -4114 13980 4116]
+MF2='mf2':'trimf',[10290 51430 92580]
+MF3='small':'trimf',[61720 102900 144000]
+
+[Input2]
+Name='female'
+Range=[0 258912]
+NumMFs=3
+MF1='Small':'gauss2mf',[35200 -10360 35200 10360]
+MF2='high':'trimf',[25890 129500 233000]
+MF3='mf3':'trimf',[155300 258900 362500]
+
+[Input3]
+Name='pic'
+Range=[0 258912]
+NumMFs=3
+MF1='Small':'gauss2mf',[35190 -10360 35190 10360]
+MF2='mf2':'trimf',[25890 129500 233000]
+MF3='mf3':'trimf',[155300 258900 362500]
+
+[Output1]
+Name='gender'
+Range=[0 258912]
+NumMFs=3
+MF1='man':'gauss2mf',[35200 -10360 35200 10360]
+MF2='woman':'trimf',[26574.9206349206 130184.920634921 233684.920634921]
+MF3='mf3':'trimf',[155300 258900 362500]
+
+[Rules]
+1 1 0, 1 (1) : 1
+3 0 1, 2 (1) : 1
+0 1 1, 1 (1) : 1
+3 2 0, 2 (1) : 1
