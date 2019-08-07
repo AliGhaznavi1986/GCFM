@@ -1,1 +1,6 @@
-This project is about gender classification framework by using facial and and also other external features like hair and clothing instead of hole face. I consider facial components include forehead, eyes, nose, mouth and chin. This system designed based on feature extraction methods for hair and clothing by using Mamdani fuzzy method for gender classification. The major contributions of this script are investigating the gender discriminating ability of clothing information; using facial components instead of the whole face to obtain higher robustness for occlusions and noise and exploiting hair and clothing information to facilitate gender classification.
+# Gender classification by using fuzzy Mamdani Method
+This project is about gender classification by using facial and  also other external features like hair and clothing instead beside extracted feature from face. 
+This system designed based on feature extraction methods from pople's face, hair and close by using Mamdani fuzzy method for gender classification. The major contributions of this script are investigating the gender discriminating ability of clothing information; using facial components instead of the whole face
+This script is part of the impilimentation of paper: 
+"Gender classification by combining clothing, hair and facial component classifiers"
+https://www.sciencedirect.com/science/article/pii/S0925231211004589?via%3Dihub
